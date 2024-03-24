@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mightyvival Rank Store  ||  support qris</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.ibb.co/C9ZBKNR/c679d75477cfd6c5b027810d45dde08f.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        header h1 {
+            font-size: 18px;
+            margin: 0;
+            margin-left: 10px;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            width: calc(50% - 20px);
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .product h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .product span {
+            font-size: 14px;
+        }
+
+        .product a {
+            display: block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: blue;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 999;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+        }
+
+        .order-btn {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="#" onclick="toggleMenu()">
+        <img src="https://i.ibb.co/16tGMRh/MIGHTYVIVALECOLOGO-108c3bc43ff4a8d3d8721cbade24148-51299481-removebg-preview.png" alt="Logo">
+    </a>
+    <h1 style="margin-right: 118px;"> Rank Server Mightyvival  Economy</h1> <!-- Menambahkan margin-right pada teks -->
+    <div id="menu" style="display:none;">
+        <a href="https://bit.ly/cobrawa" target="_blank">Join Group WhatsApp Server</a>
+    </div>
+</header>
+
+<div class="container">
+    <!-- Produk 1 -->
+    <div class="product">
+        <h3>zeus rank</h3>
+        <span>Rp 110.000</span>
+        <a href="#" class="show-benefit" onclick="togglePopup(1)">Lihat Benerfit</a>
+    </div>
+
+    <!-- Produk 2 -->
+    <div class="product">
+        <h3>mythic rank</h3>
+        <span>Rp 80.000</span>
+        <a href="#" class="show-benefit" onclick="togglePopup(2)">Lihat Benerfit</a>
+    </div>
+    
+        <!-- Produk 3 -->
+    <div class="product">
+        <h3>legend rank</h3>
+        <span>Rp 50.000</span>
+        <a href="#" class="show-benefit" onclick="togglePopup(3)">Lihat Benerfit</a>
+    </div>
+    
+    <!-- Produk 4 -->
+    <div class="product">
+        <h3>master rank</h3>
+        <span>Rp 35.000</span>
+        <a href="#" class="show-benefit" onclick="togglePopup(4)">Lihat Benerfit</a>
+    </div>
+
+    <!-- Produk 5 -->
+    <div class="product">
+        <h3>mvp rank</h3>
+        <span>Rp 15.000</span>
+        <a href="#" class="show-benefit" onclick="togglePopup(5)">Lihat Benerfit</a>
+    </div>
+    
+    <!-- Produk 6 -->
+    <div class="product">
+        <h3>elite rank</h3>
+        <span>Rp 8.000</span>
+        <a href="#" class="show-benefit" onclick="togglePopup(6)">Lihat Benerfit</a>
+    </div>
+    <!-- Anda dapat menambahkan produk lainnya di sini -->
+
+</div>
+
+<div class="popup" id="popup1">
+    <span class="close-btn" onclick="closePopup(1)">&times;</span>
+    <h2>Benerfit Rank Zeus</h2>
+    <p>• /fly</p>
+    <p>• /smite</p>
+    <p>• /time</p>
+    <p>• /repair</p>
+    <p>• /weather</p>
+    <p>• /anvil</p>
+ <p>• /flyspeed</p>
+ <p>• /enderchest</p>
+ <p>• /craft</p>
+ <p>• /heal</p>
+ <p>• /tp</p>
+ <p>• /feed</p>
+  <p>• sethome limit 30</p>
+ <p>• uang server 1.500.000</p>
+ <p>apabila ada fitur eror langsung hubungi admin </p>
+    <button class="order-btn" onclick="orderViaWhatsApp()">Order via WhatsApp 🛒</button>
+</div>
+
+<div class="popup" id="popup2">
+    <span class="close-btn" onclick="closePopup(2)">&times;</span>
+    <h2>Benerfit Rank Mythic</h2>
+    <p>• /fly</p>
+    <p>• /time</p>
+    <p>• /weather</p>
+ <p>• /tp</p>
+    <p>• /heal</p>
+ <p>• /feed</p>
+ <p>• /craft</p>
+ <p>• /repair</p>
+ <p>• /anvil</p>
+ <p>• /enderchest</p>
+ <p>• sethome limit 20</p>
+ <p>• uang server 1.000.000</p>
+ <p> apabila ada fitur eror langsung hubungi admin</p>
+    <button class="order-btn" onclick="orderViaWhatsApp()">Order via WhatsApp 🛒</button>
+</div>
+
+<div class="popup" id="popup3">
+    <span class="close-btn" onclick="closePopup(3)">&times;</span>
+    <h2>Benerfit Rank Legend</h2>
+    <p>• /fly</p>
+    <p>• /anvil</p>
+    <p>• /repair</p>
+    <p>• /anvil</p
+ <p>• /weather</p>
+ <p>• /feed</p>
+ <p>• /heal</p>
+ <p>• /enderchest</p>
+ <p>• /craft</p>
+ <p>• sethome limit 15</p>
+ <p>• uang server 500.000</p>
+ <p> apabila ada fitur eror langsung hubungi admin</p>
+    <button class="order-btn" onclick="orderViaWhatsApp()">Order via WhatsApp 🛒</button>
+</div>
+
+<div class="popup" id="popup4">
+    <span class="close-btn" onclick="closePopup(4)">&times;</span>
+    <h2>Benerfit Rank Master</h2>
+    <p>• /fly</p>
+    <p>• /enderchest</p>
+    <p>• /feed</p>
+    <p>• /heal</p>
+ <p>• /craft</p>
+ <p>• sethome limit 12</p>
+ <p>• uang server 300.000</p>
+ <p>apabila ada fitur eror langsung hubungi admin</p>
+    <button class="order-btn" onclick="orderViaWhatsApp()">Order via WhatsApp 🛒</button>
+</div>
+
+<div class="popup" id="popup5">
+    <span class="close-btn" onclick="closePopup(5)">&times;</span>
+    <h2>Benerfit Rank Mvp</h2>
+    <p>• /fly</p>
+    <p>• /feed</p>
+    <p>• /craft</p>
+    <p>• sethome limit 10</p>
+ <p>• uang server 250.000</p>
+ <p> apabila ada fitur eror langsung hubungi admin</p>
+    <button class="order-btn" onclick="orderViaWhatsApp()">Order via WhatsApp 🛒</button>
+    </div>
+    
+<div class="popup" id="popup6">
+    <span class="close-btn" onclick="closePopup(6)">&times;</span>
+    <h2>Benerfit Rank Elite</h2>
+    <p>• /fly</p>
+    <p>• /craft</p>
+    <p>• sethome limit 7</p>
+    <p>• uang server 150.000</p>
+ <p>apabila ada fitur eror langsung hubungi admin </p>
+    <button class="order-btn" onclick="orderViaWhatsApp()">Order via WhatsApp 🛒</button>
+    </div>
+    
+<footer>
+    <p>&copy; 2024 Mightyvival. All rights reserved.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById('menu');
+        if (menu.style.display === 'none') {
+            menu.style.display = 'block';
+        } else {
+            menu.style.display = 'none';
+        }
+    }
+
+    function togglePopup(popupId) {
+        const popup = document.getElementById(`popup${popupId}`);
+        popup.style.display = 'block';
+    }
+
+    function closePopup(popupId) {
+        const popup = document.getElementById(`popup${popupId}`);
+        popup.style.display = 'none';
+    }
+
+    function orderViaWhatsApp() {
+        var phoneNumber = '6283838359251';
+        var message = 'Saya ingin membeli rank.';
+        var url = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+        window.open(url, '_blank');
+    }
+</script>
+
+</body>
+</html>
+<!-- WEB INI RESMI MILIK MIGHTYVIVAL DILARANG NYOLONG SC--!>
